@@ -62,6 +62,24 @@ lspconfig["html"].setup({
   on_attach = on_attach,
 })
 
+-- configure php server
+lspconfig["intelephense"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  cmd = { "intelephense", "--stdio" },
+  filetypes = { "php" },
+  root_dir = function(fname)
+    return vim.loop.cwd()
+  end,
+  settings = {
+    intelephense = {
+      files = {
+        maxSize = 1000000,
+      },
+    },
+  },
+})
+
 -- configure typescript server with plugin
 typescript.setup({
   server = {
@@ -85,8 +103,8 @@ lspconfig["tailwindcss"].setup({
 -- configure emmet language server
 lspconfig["emmet_ls"].setup({
   capabilities = capabilities,
-  on_attach = on_attach,
-  filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+  -- on_attach = on_attach,
+  filetypes = { "html", "php", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
 })
 
 -- configure lua server (with special settings)

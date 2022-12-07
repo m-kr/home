@@ -22,6 +22,7 @@ treesitter.setup({
     "tsx",
     "yaml",
     "html",
+    "php",
     "css",
     "markdown",
     "svelte",
