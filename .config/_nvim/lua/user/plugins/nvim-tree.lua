@@ -18,10 +18,6 @@ require('nvim-tree').setup({
       -- inline_arrows = false,
     },
   },
-  view = {
-    side = 'right',
-    width = 50,
-  },
 })
 
 vim.cmd([[
@@ -31,4 +27,4 @@ vim.cmd([[
   augroup end
 ]])
 
-vim.keymap.set('n', '<leader>e', ':NvimTreeFindFileToggle<CR>')
+vim.keymap.set('n', '<leader>n', ':NvimTreeFindFileToggle<CR>')

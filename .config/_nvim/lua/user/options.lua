@@ -32,10 +32,3 @@ vim.opt.background = "dark" -- colorschemes that can be light or dark will be ma
 vim.opt.showmode = false
 vim.opt.updatetime = 4001 -- Set updatime to 1ms longer than the default to prevent polyglot from changing it
 vim.opt.redrawtime = 10000 -- Allow more time for loading syntax on large files
-vim.opt.inccommand = 'nosplit' -- show incremental changes of commands such as search & replace
-
--- Remove trailing spaces on save
-vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
-  pattern = { '*' },
-  command = [[%s/\s\+$//e]],
-})

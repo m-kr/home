@@ -24,8 +24,8 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true })
 vim.keymap.set('v', 'p', '"_dP')
 
 -- Easy insertion of a trailing ; or , from insert mode
--- vim.keymap.set('i', ';;', '<Esc>A;<Esc>')
--- vim.keymap.set('i', ',,', '<Esc>A,<Esc>')
+vim.keymap.set('i', ';;', '<Esc>A;<Esc>')
+vim.keymap.set('i', ',,', '<Esc>A,<Esc>')
 
 -- Open the current file in the default program (on Mac this should just be just `open`)
 vim.keymap.set('n', '<leader>x', ':!xdg-open %<cr><cr>')
@@ -34,10 +34,10 @@ vim.keymap.set('n', '<leader>x', ':!xdg-open %<cr><cr>')
 vim.keymap.set('n', 'q:', ':q<CR>')
 
 -- Resize with arrows
-vim.keymap.set('n', '<C-Up>', ':resize +5<CR>')
-vim.keymap.set('n', '<C-Down>', ':resize -5<CR>')
-vim.keymap.set('n', '<C-Left>', ':vertical resize -5<CR>')
-vim.keymap.set('n', '<C-Right>', ':vertical resize +5<CR>')
+vim.keymap.set('n', '<C-Up>', ':resize +2<CR>')
+vim.keymap.set('n', '<C-Down>', ':resize -2<CR>')
+vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>')
+vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>')
 
 -- Move text up and down
 vim.keymap.set('i', '<A-j>', '<Esc>:move .+1<CR>==gi')

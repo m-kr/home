@@ -63,6 +63,33 @@ use({
   end,
 })
 use('bluz71/vim-nightfly-guicolors') -- preferred colorscheme
+-- use({
+--   'jessarcher/onedark.nvim',
+--   config = function()
+--     vim.cmd('colorscheme onedark')
+
+--     -- Hide the characters in FloatBorder
+--     vim.api.nvim_set_hl(0, 'FloatBorder', {
+--       fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
+--       bg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
+--     })
+
+--     -- Make the StatusLineNonText background the same as StatusLine
+--     vim.api.nvim_set_hl(0, 'StatusLineNonText', {
+--       fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
+--       bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
+--     })
+
+--     -- Hide the characters in CursorLineBg
+--     vim.api.nvim_set_hl(0, 'CursorLineBg', {
+--       fg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
+--       bg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
+--     })
+
+--     vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
+--     vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2F313C' })
+--   end,
+-- })
 
 use({
   'tommcdo/vim-lion',
@@ -151,6 +178,13 @@ use({
 })
 
 use({
+  'voldikss/vim-floaterm',
+  config = function()
+    require('user.plugins.floaterm')
+  end,
+})
+
+use({
   'nvim-telescope/telescope.nvim',
   requires = {
     { 'nvim-lua/plenary.nvim' },
@@ -174,6 +208,12 @@ use({
   config = function()
     require('user.plugins.treesitter')
   end,
+})
+
+use({
+  'tpope/vim-fugitive',
+  requires = 'tpope/vim-rhubarb',
+  cmd = 'G',
 })
 
 use({
@@ -309,20 +349,6 @@ use({
   'antoinemadec/FixCursorHold.nvim',
   config = function()
     vim.g.cursorhold_updatetime = 100
-  end,
-})
-
-use({'numToStr/FTerm.nvim', 
-  config = function()
-    require('user.plugins.fterm')
-  end,
-})
-
-use({
-  'tpope/vim-fugitive',
-  requires = 'tpope/vim-rhubarb',
-  config = function()
-    vim.keymap.set('n', '<leader>g', ':Git<CR>');
   end,
 })
 
