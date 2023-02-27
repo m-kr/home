@@ -81,15 +81,16 @@ require('lspconfig').intelephense.setup({
   capabilities = capabilities,
 })
 
-require'lspconfig'.phpactor.setup{
-  -- cmd = { '/home/jess/.local/share/nvim/site/pack/packer/opt/phpactor/bin/phpactor', 'language-server' },
-  on_attach = on_attach,
-  capabilities = capabilities,
-  init_options = {
-    ["language_server_phpstan.enabled"] = false,
-    ["language_server_psalm.enabled"] = false,
-  }
-}
+-- require'lspconfig'.phpactor.setup{
+--   -- cmd = { '/home/jess/.local/share/nvim/site/pack/packer/opt/phpactor/bin/phpactor', 'language-server' },
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--   init_options = {
+--     ["php.version"] = 8.2,
+--     ["language_server_phpstan.enabled"] = true,
+--     ["language_server_psalm.enabled"] = false,
+--   }
+-- }
 
 require('lspconfig').jsonls.setup({
   on_attach = on_attach,
