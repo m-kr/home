@@ -1,4 +1,5 @@
 return {
+  -- { "EdenEast/nightfox.nvim" },
   -- { "rose-pine/neovim", name = "rose-pine" },
   -- {
   --   "catppuccin/nvim",
@@ -36,11 +37,22 @@ return {
   --     },
   --   },
   -- },
-  { "ellisonleao/gruvbox.nvim" },
+  -- { "ellisonleao/gruvbox.nvim" },
+  {
+    "luisiacc/gruvbox-baby",
+    init = function()
+      -- vim.g.gruvbox_baby_function_style = "NONE"
+      -- vim.g.gruvbox_baby_keyword_style = "italic"
+      -- See also :h highlight-guifg
+      -- vim.g.gruvbox_baby_highlights = { Normal = { fg = "#123123", bg = "NONE", style = "underline" } }
+      -- vim.g.gruvbox_baby_telescope_theme = 1
+      vim.g.gruvbox_baby_transparent_mode = 1
+    end,
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "gruvbox-baby",
     },
   },
 }
